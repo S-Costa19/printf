@@ -6,12 +6,8 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <string.h>
 
 /* Function prototype */
-int _putchar(char* c);
-int cint(va_list arg);
-int pSint(int, int);
-int pUsint(int, int);
+int _putchar(char c);
 int _printf(const char *format, ...);
 #endif /* MAIN_H */
