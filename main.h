@@ -14,4 +14,9 @@ int cint(va_list arg);
 int pSint(int, int);
 int pUsint(int, int);
 int _printf(const char *format, ...);
+
+int pChar(va_list arg);
+int pString(va_list arg);
+int pPercent(int pp(va_list arg, x)/*x is a function pointer)*/
+
 #endif /* MAIN_H */
