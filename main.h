@@ -9,7 +9,6 @@
 #include <string.h>
 
 /* Function prototype */
-int _putchar(char c)
 int cint(va_list arg);
 int pSint(int, int);
 int pUsint(int, int);
@@ -20,3 +19,5 @@ int pString(va_list arg);
 int pPercent(va_list arg);
 
 #endif /* MAIN_H */
+
+
