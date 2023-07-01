@@ -1,110 +1,51 @@
 #include "main.h"
 
-/*
- * Funtion prototypes
- * int pChar(va_list arg);
- * int pString(va_list arg);
- * int pPercent(va_list arg)
-*/
-
-/*Function 1*/
-
-/*
- * pChar -print char
+/**
+ * pc - print char
  * @arg: argument
  *
- * Return: 1 if successful
+ * Return: 0 if successful
  */
+int pc(va_list arg)
+{
+	char c = va_arg(arg, int);
 
-/*function to print char */
-char pChar(va_list arg)
-{char c = va_arg(arg, int);
-	putchar(c);
+	_putchar(c);
 	return (1);
 }
 
-/*function to print string*/
-/* Function 2*/
-
 /**
- * pString  - print string
+ * pp - print percentage
  * @arg: argument
  *
- * Return:  0 to the number of characters in string.
+ * Return: 0 if successful
  */
-
-/*Function to print percentage*/
-char pString(va_list arg)
-{	int i = 0;
-	char *Str;
-
-	if (!Str[i] || Str == "null")
-	{Str = "null"; }
-	Str[i] = strlen(Str);
-	for (int i = 0; Str[i] != '\0'; i++)
-	{putchar (Str[i]) ; }
-
-	return (1) ; }
-
-/* Function 3 */
-
-/**
- * pPercent - print percent
- * @arg: argument
- *
- * Return: 1 if successful
- */
-
-int pPercent(va_list arg)
+int pp(va_list arg __attribute__((unused)))
 {
-	return (write(1, "%%", 1));
+	_putchar('%');
+	return (1);
 }
 
+/**
+ * ps - print string
+ * @arg: argument
+ *
+ * Return: a - 1 the number of characters in string.
+ */
+int ps(va_list arg)
+{
+	int a = 0;
+	char *s = va_arg(arg, char *);
 
+	if (!s)
+		s = "(null)";
 
+	while (s[a] != '\0')
+	{
+		_putchar(s[a]);
+		a++;
+	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	return (a);
+}
 

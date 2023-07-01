@@ -2,22 +2,32 @@
 #define MAIN_H
 
 /* header files */
-#include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <string.h>
 
-/* Function prototype */
-int cint(va_list arg);
-int pSint(int, int);
-int pUsint(int, int);
+/**
+ * struct character_print - print data
+ * @c: character.
+ * @f_pr: function pointer
+ */
+typedef struct character_print
+{
+	char *c;
+	int (*f_pr)(va_list arg);
+} print_d;
+
+/* function prototypes */
 int _printf(const char *format, ...);
+int _putchar(char c);
+int pc(va_list arg);
+int ps(va_list arg);
+int pp(va_list arg __attribute((unused)));
 
-char Char(va_list arg);
-char pString(va_list arg);
-int pPercent(va_list arg);
-
+int dc(va_list arg);
+int print_dig(long int k, long int n);
+int dcu(va_list arg);
+int print_dig_u(long int k, long int n);
+int bc(va_list arg);
+int print_binary(long int k, long int n);
 #endif /* MAIN_H */
-
-
