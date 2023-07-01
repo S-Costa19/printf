@@ -3,7 +3,7 @@
 /* Funtion prototypes
  * int pChar(va_list arg);
  * int pString(va_list arg);
- * int pPercent(int pp(va_list arg, x) x is a function pointer)
+ * int pPercent(va_list arg)
 */
 
 /*Function 1*/
@@ -12,14 +12,13 @@
  * pChar - print char
  * @arg: argument
  *
- * Return: 0 if successful
+ * Return: 1 if successful
  */
 
 int pChar(va_list arg)
-{
-	char c = va_arg(arg, int);
+{char c = va_arg(arg, int);
 	_putchar(c);
-	return (0);
+	return (1);
 }
 
 
@@ -32,34 +31,31 @@ int pChar(va_list arg)
  * Return:  1 to the number of characters in string.
  */
 int pString(va_list arg)
-if (*format[f] == 's')
-{
-    char* charString = va_arg(args, char*);
-    if (charString != NULL)
-    {
-        int index = 0;
-        while (charString[index] != '\0')
-        {
-            _putchar(charString[index]);
-            index++;
-        }
-    return (1);
-    }
+{int i=0; char*Str;
+	if Str[i]= !Str[i] || Str [i]== NULL
+	{Str[i]= " "}
+	char*Str = va_args(arg, char*);
+	for (int i = 0; Str[i]! = '\0'; i++)
+	{
+	_putchar(Str[i]);
+	}
+	return (1);
+}
 
 
- /* Function 3 */
+/* Function 3 */
 
 /**
- * I
+ * 
  *pPercent - print  percentage
  * @arg: argument
  *
- * Return: 0 if successful
+ * Return:1 if successful
  */
-int pPercent(va_list arg __attribute__((unused)))
+
+int pPercent(va_list arg)
 {
-	_putchar('%');
-	return (1);
+ return (write(1,"%%",1));
 }
 
 
