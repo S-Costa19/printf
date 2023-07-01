@@ -14,8 +14,8 @@ int pSint(int, int);
 int pUsint(int, int);
 int _printf(const char *format, ...);
 
-int pChar(va_list arg);
-int pString(va_list arg);
+char Char(va_list arg);
+char pString(va_list arg);
 int pPercent(va_list arg);
 
 #endif /* MAIN_H */
